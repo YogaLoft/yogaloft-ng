@@ -15,41 +15,45 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.calendar'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'MainCtrl',
+        activeRoute: 'home'
       })
       .when('/timetable', {
         templateUrl: 'views/timetable.html',
-        controller: 'TimetableCtrl'
+        controller: 'TimetableCtrl',
+        activeRoute: 'timetable'
       })
       .when('/workshops', {
         templateUrl: 'views/workshops.html',
-        controller: 'WorkshopsCtrl'
+        controller: 'WorkshopsCtrl',
+        activeRoute: 'workshops'
       })
       .when('/yoga', {
         templateUrl: 'views/yoga.html',
-        controller: 'YogaCtrl'
+        controller: 'YogaCtrl',
+        activeRoute: 'yoga'
       })
       .when('/teachers', {
         templateUrl: 'views/teachers.html',
-        controller: 'TeachersCtrl'
+        controller: 'TeachersCtrl',
+        activeRoute: 'teachers'
       })
       .when('/gallery', {
         templateUrl: 'views/gallery.html',
-        controller: 'GalleryCtrl'
+        controller: 'GalleryCtrl',
+        activeRoute: 'gallery'
       })
       .when('/map', {
         templateUrl: 'views/map.html',
-        controller: 'MapCtrl'
+        controller: 'MapCtrl',
+        activeRoute: 'map'
       })
       .otherwise({
         redirectTo: '/'

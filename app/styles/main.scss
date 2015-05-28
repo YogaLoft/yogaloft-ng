@@ -67,6 +67,82 @@ body {
   }
 }
 
+.calendar-event {
+  border: 0;
+  background-color: transparent;
+}
+
+.navbar-brand > img {
+  display: inline;
+}
+
+/*----------------------------------------------------------
+slideshow
+----------------------------------------------------------*/
+#slides {
+    margin: 30px auto 0 auto;
+    position: relative;
+    width: 680px;
+    height: 340px;
+    padding: 10px;
+    box-shadow: 0 0 20px #ddd;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#slides > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+/*----------------------------------------------------------
+photos
+----------------------------------------------------------*/
+div.photo {
+    margin: 30px auto 0 auto;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 0 20px #ddd;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+img.photo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+.album-cover-container {
+    float: left;
+    margin: 10px;
+}
+
+/*----------------------------------------------------------
+teacher profiles
+----------------------------------------------------------*/
+.teacher-bio img {
+    float: left;
+    margin: 20px 10px 10px 0;
+}
+#teacher-list li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#teacher-list blockquote {
+    font-size: small;
+}
+.img-thumbnail:after {
+ clear:both;
+ *zoom:1;
+ height:0;
+ visibility: hidden;
+ display:block;
+}
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
