@@ -16,8 +16,19 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.calendar'
+    'ui.calendar',
+    'facebook'
   ])
+
+  .constant('config', {
+    'facebookAppId': '1434342883499221'
+  })
+
+  .config(function (FacebookProvider) {
+    //FacebookProvider.init(config.facebookAppId);
+    FacebookProvider.init('1434342883499221');
+  })
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
