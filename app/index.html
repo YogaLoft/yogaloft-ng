@@ -55,7 +55,7 @@
                 <ul class="dropdown-menu">
                   <li ng-repeat="instructor in ['Charlotte-Levy', 'Gavin-Tilstone', 'Jo-Thyssen', 'Jules-Laville', 'Keef-Wesolowski-Miles', 'Lee-Miller', 'Marilina-De-Matteis', 'Nic-Sharpe', 'Peter-Hughes', 'Venita-Botha']">
                     <a href="/#/teachers/{{instructor}}">
-                      <img class="img-rounded" src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{instructor}}/24x24.png" />
+                      <img class="img-rounded" ng-src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{instructor}}/24x24.png" />
                       {{instructor.replace('-', ' ').replace('-', ' ')}}
                     </a>
                   </li>

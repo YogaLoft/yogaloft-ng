@@ -5,7 +5,7 @@
     <ul class="list-unstyled">
       <li ng-repeat="item in upcomingClasses | filter:{ day: day }">
         <a href="{{item.instructor.url}}">
-          <img style="border-radius: 50%; width: 64px; height: 64px;" src="{{item.instructor.image}}" />
+          <img style="border-radius: 50%; width: 64px; height: 64px;" ng-src="{{item.instructor.image}}" />
         </a>
         <br />
         {{item.start}} ~ {{item.end}}
