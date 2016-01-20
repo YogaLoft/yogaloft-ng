@@ -7,15 +7,13 @@
         <a href="{{item.instructor.url}}">
           <img style="border-radius: 50%; width: 64px; height: 64px;" src="{{item.instructor.image}}" />
         </a>
-        
         <br />
         {{item.start}} ~ {{item.end}}
         <br />
-        <a href="{{item.classUrl}}">{{item.class}}</a> with
+        <a href="{{item.class.url}}">{{item.class.name}}</a> with
         <a href="{{item.instructor.url}}">{{item.instructor.name}}</a>
       </li>
     </ul>
   </div>
   <div class="clearfix"></div>
 </div>
-<pre>{{days | json }}</pre>
