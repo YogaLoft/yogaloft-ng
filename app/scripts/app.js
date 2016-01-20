@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngIcal'
+    'ngIcal',
+    'hc.marked'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -29,6 +30,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/teachers/:instructor', {
+        templateUrl: 'views/teachers.html',
+        controller: 'TeachersCtrl',
+        controllerAs: 'teachers'
       })
       .otherwise({
         redirectTo: '/'

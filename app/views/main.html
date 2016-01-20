@@ -4,7 +4,10 @@
     <h3>{{day}}</h3>
     <ul class="list-unstyled">
       <li ng-repeat="item in upcomingClasses | filter:{ day: day }">
-        <img style="border-radius: 50%; width: 64px; height: 64px;" src="{{item.instructor.image}}" />
+        <a href="{{item.instructor.url}}">
+          <img style="border-radius: 50%; width: 64px; height: 64px;" src="{{item.instructor.image}}" />
+        </a>
+        
         <br />
         {{item.start}} ~ {{item.end}}
         <br />

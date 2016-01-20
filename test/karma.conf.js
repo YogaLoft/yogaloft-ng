@@ -33,6 +33,8 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/ical.js/build/ical.js',
       'bower_components/angular-ical/dist/js/angular-ical.js',
+      'bower_components/marked/lib/marked.js',
+      'bower_components/angular-marked/dist/angular-marked.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

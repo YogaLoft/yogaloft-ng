@@ -48,10 +48,19 @@
             </a>
           </div>
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+            <ul class="nav navbar-nav pull-right">
+              <li class="active"><a href="#/">home</a></li>
+              <li class="dropdown">
+                <a href class="dropdown-toggle" data-toggle="dropdown">teachers <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li ng-repeat="instructor in ['Charlotte-Levy', 'Gavin-Tilstone', 'Jo-Thyssen', 'Jules-Laville', 'Keef-Wesolowski-Miles', 'Lee-Miller', 'Marilina-De-Matteis', 'Nic-Sharpe', 'Peter-Hughes', 'Venita-Botha']">
+                    <a href="/#/teachers/{{instructor}}">
+                      <img class="img-rounded" src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{instructor}}/24x24.png" />
+                      {{instructor.replace('-', ' ').replace('-', ' ')}}
+                    </a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -86,12 +95,15 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/ical.js/build/ical.js"></script>
     <script src="bower_components/angular-ical/dist/js/angular-ical.js"></script>
+    <script src="bower_components/marked/lib/marked.js"></script>
+    <script src="bower_components/angular-marked/dist/angular-marked.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/teachers.js"></script>
     <!-- endbuild -->
   </body>
 </html>

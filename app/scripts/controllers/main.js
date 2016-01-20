@@ -32,8 +32,8 @@ angular.module('ylngApp')
             class: summary[0],
             instructor: {
               name: summary[1],
-              url: '/instructors/' + summary[1].replace(/ /g, '-'),
-              image: '/images/teachers/128x128/' + summary[1].replace(/ /g, '-') + '.png'
+              url: '/#/teachers/' + summary[1].replace(/ /g, '-'),
+              image: 'https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/' + summary[1].replace(/ /g, '-') + '/128x128.png'
             },
             location: vevent.getFirstPropertyValue('location')
           });
