@@ -61,6 +61,11 @@ angular
         controller: 'ClassesCtrl',
         controllerAs: 'classes'
       })
+      .when('/prices', {
+        templateUrl: 'views/prices.html',
+        controller: 'PricesCtrl',
+        controllerAs: 'prices'
+      })
       .otherwise({
         redirectTo: '/'
       });
