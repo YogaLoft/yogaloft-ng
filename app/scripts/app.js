@@ -51,6 +51,11 @@ angular
         controller: 'AccountCtrl',
         controllerAs: 'account'
       })
+      .when('/map', {
+        templateUrl: 'views/map.html',
+        controller: 'MapCtrl',
+        controllerAs: 'map'
+      })
       .otherwise({
         redirectTo: '/'
       });

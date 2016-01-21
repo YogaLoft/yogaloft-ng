@@ -66,6 +66,9 @@
                   </li>
                 </ul>
               </li>
+              <li ng-class="{ active: isActive('/map')}">
+                <a href="#/map">find us</a>
+              </li>
               <li ng-class="{ active: isActive('/account')}">
                 <a href="#/account">my account</a>
               </li>
@@ -79,7 +82,13 @@
     </div>
     <div class="footer">
       <div class="container-fluid">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yoga Loft</p>
+        <div class="col-md-4">
+          <p><span class="glyphicon glyphicon-heart"></span> from the Yoga Loft</p>
+        </div>
+        <div class="col-md-8">
+          <p class="pull-right">11 Whimple Street, Plymouth, <a href="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=Yoga+Loft,+Whimple+Street,+Plymouth&aq=0&oq=yoga+loft&sll=50.395651,-4.137633&sspn=0.022981,0.048752&vpsrc=0&t=v&ie=UTF8&hq=Yoga+Loft,&hnear=Whimple+St,+Plymouth,+United+Kingdom&z=16&iwloc=A&cid=1358849397595768961" target="_blank">PL1 2DH</a> | <a href="mailto:info@yogaloft.co.uk">info@yogaloft.co.uk</a></p>
+        </div>
+
       </div>
     </div>
      <script>
@@ -117,6 +126,7 @@
     <script src="scripts/controllers/timetable.js"></script>
     <script src="scripts/controllers/nav.js"></script>
     <script src="scripts/controllers/account.js"></script>
+    <script src="scripts/controllers/map.js"></script>
     <!-- endbuild -->
   </body>
 </html>
