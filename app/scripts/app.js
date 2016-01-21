@@ -41,6 +41,16 @@ angular
         controller: 'TestCtrl',
         controllerAs: 'test'
       })
+      .when('/timetable', {
+        templateUrl: 'views/timetable.html',
+        controller: 'TimetableCtrl',
+        controllerAs: 'timetable'
+      })
+      .when('/account', {
+        templateUrl: 'views/account.html',
+        controller: 'AccountCtrl',
+        controllerAs: 'account'
+      })
       .otherwise({
         redirectTo: '/'
       });
