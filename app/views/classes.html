@@ -1,0 +1,27 @@
+<div class="alert alert-info" ng-show="class.notes && class.notes.length">
+  <span ng-repeat="note in class.notes" marked="note"></span>
+</div>
+<div class="alert alert-warning" ng-show="class.warnings && class.warnings.length">
+  <span ng-repeat="warning in class.warnings" marked="warning"></span>
+</div>
+<div class="alert alert-danger" ng-show="class.alerts && class.alerts.length">
+  <span ng-repeat="alert in class.alerts" marked="alert"></span>
+</div>
+
+
+<div class="clearfix content-heading">
+  <a href="#/teachers/{{class.instructor.id}}">
+    <img class="pull-left" style="border-radius: 50%; width: 64px; height: 64px; margin-right: 20px;" ng-src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{class.instructor.id}}/128x128.png" />
+  </a>
+  <h1>{{class.name}}</h1>
+</div>
+<h2>
+  <i class="fa fa-clock-o"></i>
+  {{weekday}} {{class.start}} - {{class.end}}
+</h2>
+<h3>with <a href="#/teachers/{{class.instructor.id}}">{{class.instructor.name}}</a></h3>
+<div marked="markdown"></div>
+
+<div ng-show="passes && passes.length">
+  <script type="text/javascript" async src="https://yogaloft.tulasoftware.com/assets/purchase-widget.js"></script><a class="tulasoftware-purchase-widget" href="{{passes}}">Purchase</a>
+</div>

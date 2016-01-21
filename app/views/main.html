@@ -1,19 +1,26 @@
-<div class="jumbotron">
+<div class="jumbotron" style="background-color: white;">
   <h2>what's on</h2>
   <div class="col-md-4" ng-repeat="day in days">
-    <h3>{{day}}</h3>
-    <ul class="list-unstyled">
-      <li ng-repeat="item in upcomingClasses | filter:{ day: day }">
-        <a href="{{item.instructor.url}}">
-          <img style="border-radius: 50%; width: 64px; height: 64px;" ng-src="{{item.instructor.image}}" />
-        </a>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          {{day}}
+        </h3>
+      </div>
+      <div class="panel-body text-left">
+        <ul class="list-unstyled">
+          <li ng-repeat="item in upcomingClasses | filter:{ day: day }">
+            <a href="{{item.instructor.url}}">
+              <img class="img-rounded" ng-src="{{item.instructor.image}}" />
+            </a>
+            {{item.start}} ~ {{item.end}}:
+            <a href="{{item.class.url}}">{{item.class.name}}</a> with
+            <a href="{{item.instructor.url}}">{{item.instructor.name}}</a>
+          </li>
+        </ul>
         <br />
-        {{item.start}} ~ {{item.end}}
-        <br />
-        <a href="{{item.class.url}}">{{item.class.name}}</a> with
-        <a href="{{item.instructor.url}}">{{item.instructor.name}}</a>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
   <div class="clearfix"></div>
 </div>

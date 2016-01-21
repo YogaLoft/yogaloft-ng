@@ -55,11 +55,26 @@
               <li ng-class="{ active: isActive('/timetable')}">
                 <a href="#/timetable">timetable</a>
               </li>
+              <li class="dropdown" ng-class="{ active: isActive('/classes')}">
+                <a href class="dropdown-toggle" data-toggle="dropdown">classes <b class="caret"></b></a>
+                <ul class="dropdown-menu" style="padding: 0 0.5em;">
+                  <li ng-repeat="(day, classes) in ci">
+                    {{day}}
+                    <ul class="list-unstyled" style="padding: 0 0.5em;">
+                      <li ng-repeat="class in classes">
+                        <a href="#/classes/{{day}}/{{class.id}}">
+                          {{class.name}}
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
               <li class="dropdown" ng-class="{ active: isActive('/teachers')}">
                 <a href class="dropdown-toggle" data-toggle="dropdown">teachers <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li ng-repeat="instructor in instructors">
-                    <a href="/#/teachers/{{instructor}}">
+                    <a href="#/teachers/{{instructor}}">
                       <img class="img-rounded" ng-src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{instructor}}/24x24.png" />
                       {{instructor.replace('-', ' ').replace('-', ' ')}}
                     </a>
@@ -127,6 +142,7 @@
     <script src="scripts/controllers/nav.js"></script>
     <script src="scripts/controllers/account.js"></script>
     <script src="scripts/controllers/map.js"></script>
+    <script src="scripts/controllers/classes.js"></script>
     <!-- endbuild -->
   </body>
 </html>

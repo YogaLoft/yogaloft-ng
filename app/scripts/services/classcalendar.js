@@ -30,4 +30,24 @@ angular.module('ylngApp')
         }
       );
     };
+    this.index = function() {
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/classes/index.json').then(
+        function (response) {
+          return (response.data);
+        },
+        function (error) {
+          throw error.status + " : " + error.data;
+        }
+      );
+    };
   });
+/*
+angular.module('ylngApp')
+  .factory('classes', ['$http', function ($http) {
+    return {
+      query: function () {
+        return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/classes/index.json');
+      }
+    };
+  }]);
+  */
