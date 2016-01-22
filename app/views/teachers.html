@@ -1,2 +1,9 @@
 <img src="{{teacher.image.source}}" alt="{{teacher.image.alt}}" class="img-rounded pull-left" style="margin-right: 1em; margin-bottom: 0.5em;" />
 <div marked="teacher.markdown"></div>
+<div class="clearfix"></div>
+<h4>Classes at the Yoga Loft</h4>
+<ul ng-repeat="(day, classes) in ci" class="list-unstyled">
+  <li ng-repeat="class in classes">
+    {{day}}, {{class.start}}: <a href="#/classes/{{day}}/{{class.id}}">{{class.name}}</a>
+  </li>
+</ul>

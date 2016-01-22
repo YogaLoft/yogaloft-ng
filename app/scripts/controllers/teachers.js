@@ -8,7 +8,7 @@
  * Controller of the ylngApp
  */
 angular.module('ylngApp')
-  .controller('TeachersCtrl', function ($scope, $routeParams, $http) {
+  .controller('TeachersCtrl', function ($scope, $routeParams, $http, classCalendar) {
     $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/' + $routeParams.instructor + '/profile.md').then(function(res) {
       $scope.teacher = {
         id: $routeParams.instructor,
@@ -20,4 +20,21 @@ angular.module('ylngApp')
         }
       };
     });
+    classCalendar.index().then(
+      function (ci) {
+        for (var weekday in ci) {
+          if (ci.hasOwnProperty(weekday)) {
+            ci[weekday] = ci[weekday].filter(
+              function(c){
+                return c.instructor.id === $routeParams.instructor;
+              }
+            );
+          }
+        }
+        $scope.ci = ci;
+      },
+      function (error) {
+        console.log(error.statusText);
+      }
+    );
   });
