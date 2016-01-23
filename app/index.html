@@ -61,15 +61,41 @@
               <li class="dropdown" ng-class="{ active: isActive('/classes')}">
                 <a href class="dropdown-toggle" data-toggle="dropdown">classes <b class="caret"></b></a>
                 <ul class="dropdown-menu" style="padding: 0 0.5em;">
-                  <li ng-repeat="(day, classes) in ci">
-                    {{day}}
-                    <ul class="list-unstyled" style="padding: 0 0.5em;">
-                      <li ng-repeat="class in classes">
-                        <a href="#/classes/{{day}}/{{class.id}}">
-                          {{class.name}}
-                        </a>
-                      </li>
-                    </ul>
+                  <li><strong>Monday</strong></li>
+                  <li ng-repeat="class in ci.Monday">
+                    <a href="#/classes/Monday/{{class.id}}">
+                      {{class.name}}
+                    </a>
+                  </li>
+                  <li><strong>Tuesday</strong></li>
+                  <li ng-repeat="class in ci.Tuesday">
+                    <a href="#/classes/Tuesday/{{class.id}}">
+                      {{class.name}}
+                    </a>
+                  </li>
+                  <li><strong>Wednesday</strong></li>
+                  <li ng-repeat="class in ci.Wednesday">
+                    <a href="#/classes/Wednesday/{{class.id}}">
+                      {{class.name}}
+                    </a>
+                  </li>
+                  <li><strong>Thursday</strong></li>
+                  <li ng-repeat="class in ci.Thursday">
+                    <a href="#/classes/Thursday/{{class.id}}">
+                      {{class.name}}
+                    </a>
+                  </li>
+                  <li><strong>Friday</strong></li>
+                  <li ng-repeat="class in ci.Friday">
+                    <a href="#/classes/Friday/{{class.id}}">
+                      {{class.name}}
+                    </a>
+                  </li>
+                  <li><strong>Saturday</strong></li>
+                  <li ng-repeat="class in ci.Saturday">
+                    <a href="#/classes/Saturday/{{class.id}}">
+                      {{class.name}}
+                    </a>
                   </li>
                 </ul>
               </li>
