@@ -1,9 +1,24 @@
 sudo: false
 language: node_js
+before_install:
+- gem install sass compass
 node_js:
-  - 'iojs'
-  - '0.12'
-  - '0.10'
+- iojs
 before_script:
-  - 'npm install -g bower grunt-cli'
-  - 'bower install'
+- npm install -g bower grunt-cli
+- bower install
+script:
+- grunt build
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./publish.sh
+  on:
+    branch: master
+    condition: "$TRAVIS_PULL_REQUEST = false"
+env:
+  global:
+  - GIT_NAME: Travis-CI
+  - GIT_EMAIL: travis.ci.build@gmail.com
+  - GH_REF: github.com/YogaLoft/yogaloft.github.io.git
+  - GH_PAGES_BRANCH: master
