@@ -66,6 +66,11 @@ angular
         controller: 'PricesCtrl',
         controllerAs: 'prices'
       })
+      .when('/faq', {
+        templateUrl: 'views/faq.html',
+        controller: 'FaqCtrl',
+        controllerAs: 'faq'
+      })
       .otherwise({
         redirectTo: '/'
       });
