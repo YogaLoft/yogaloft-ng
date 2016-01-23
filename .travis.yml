@@ -12,7 +12,7 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: ./publish.sh
+  script: "./publish.sh"
   on:
     branch: master
     condition: "$TRAVIS_PULL_REQUEST = false"
@@ -22,3 +22,4 @@ env:
   - GIT_EMAIL: travis.ci.build@gmail.com
   - GH_REF: github.com/YogaLoft/yogaloft.github.io.git
   - GH_PAGES_BRANCH: master
+  - secure: UXcUP61tvK2Q/J4GAHnma3YBZ3gacQrrA80h640IQHnFpYH0WkndsyOiL7Zg0rsOU6D9NsTLMF+d8fUOjxAeOVpZhqhWelxeS95g4XiitIr/OFDeB5mpyX/FthJVbONGhJw8J8GjDJL9EG81aSTBEa11M5vj9adjr1j/GPY8SLUIqTJdjDVIB0qYOUh/ppQimkijMnNlK10C8tM1eQCGSmW3F9hLBY4wJwbp/2xrBATfGEcghvaQdOTqTveQHs0+JVMl+jRjMSTghZlQ2nO1iskmm2fUhwjzDq8jIXPf8v5tM9HAWBf+aGTpIaxGQL17P/FdmnX4f9FylE/6Q+rg1LC0IBDQpoXp9EtiaoLpHKFkvBS+Ab374oZ7V9yUWg9QedMjeRkGwxdgRUSXDPPtSMr18l13EP8kuT79Y+Nt24SkhvFLUVAszKi3OXAL1tzjtCQIQT2Fdj6DpiYSegMFkgrIidF8BHFYUOnriJAc0cq1+lhNj5goherxael8n5o7T+PtVIPvKk9pfyhPBo1SOsP3punQKg5gNU0JlSdW3QZyn5LVIDc4Nb2cFfwUTyq7sQoDztKhS/RuNhVMfb+9VxsHMdWV3hgOdryBIq0KAFfG7cvDlDiKGmD8+P52nAD3EI4Oy10wer11FJmAv4uQ8ZYlYGdp5b8tOwABMG/IFaA=
