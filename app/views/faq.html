@@ -1,52 +1,26 @@
 <h1>frequently asked questions</h1>
-
-<div class="panel panel-default">
-  <div class="panel-heading" ng-click="q1=!q1">
-    <h3 class="panel-title">I'm a beginner. Can I go to any class?</h3>
-  </div>
-  <div class="panel-body" ng-show="q1">
-    <p><strong>Yes, you can!</strong> All of the teachers will support you in your beginning stages at any class. We also offer a dedicated <a href="#/classes/Thursday/Beginners">Beginners class</a> where everyone else in the session is a beginner too, in case that helps to relax you.</p>
-    <blockquote>
-      <p>Ideally, I'd like to be the eternal novice, for then only, the surprises would be endless.</p>
-      <footer>
-        <cite>Keith Jarrett</cite>
-      </footer>
-    </blockquote>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading" ng-click="q2=!q2">
-    <h3 class="panel-title">What should I wear?</h3>
-  </div>
-  <div class="panel-body" ng-show="q2">
-    <p><strong>Anything comfortable</strong> for example: a t-shirt and shorts or leggings.</p>
-    <blockquote>
-      <p>You always want to practice yoga barefoot so you can fully connect your feet to the mat and the earth, ensuring better balance and strength. Socks interfere with your connection, and they can make it harder to balance. Neither you nor your teacher can see if your feet are properly aligned if they are hidden under socks, and you run the risk of injury from slipping if you wear them.</p>
-      <footer>
-        <cite><a href="http://www.sparkpeople.com/blog/blog.asp?post=your_12_most_embarrassing_yoga_questions_answered">Stepfanie Romine</a></cite>
-      </footer>
-    </blockquote>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading" ng-click="q3=!q3">
-    <h3 class="panel-title">What should I bring?</h3>
-  </div>
-  <div class="panel-body" ng-show="q3">
-    <p><strong>Yourself!</strong> We provide mats but you are very welcome to bring your own if you prefer. We usually have new mats available for purchase as well.</p>
-    <p>Tap water is available in the Loft so you can fill your water bottles. We stock bottled water too but nothing fancy. :)</p>
-  </div>
-</div>
-
-<div class="panel panel-default" ng-if="false">
-  <div class="panel-heading" ng-click="q4=!q4">
-    <h3 class="panel-title">I'm pregnant. Can I still join in?</h3>
-  </div>
-  <div class="panel-body" ng-show="q4">
-    <p>Maybe. Some of the classes contain excercises that are not suitable at all during pregnancy and could be harmful to you or your unborn child/children.</p>
-    <p>You should specifically discuss taking part in yoga classes with your doctor. If they give you professional advice that it is safe to take part, email us at <a href="mailto:info@yogaloft.co.uk">info@yogaloft.co.uk</a>. We'll suggest an appropriate class and give your teacher a heads up about the fact that you are pregnant, so that they can tailor your programme of excercise accordingly. It's possible that we will not have a class running that is suitable.</p>
+<div ng-repeat="category in faq">
+  <h2>{{category.category}}</h2>
+  <div class="panel panel-default" ng-repeat="question in category.items">
+    <div class="panel-heading" ng-click="question.show=!question.show">
+      <h3 class="panel-title">{{question.question}}</h3>
+    </div>
+    <div class="panel-body" ng-show="question.show">
+      <span ng-repeat="answer in question.answer.text" marked="answer"></span>
+      <blockquote ng-if="question.answer.quote.text">
+        <span ng-repeat="quote in question.answer.quote.text" marked="quote"></span>
+        <footer ng-if="question.answer.quote.cite">
+          <cite>
+            <a ng-if="question.answer.quote.cite.url" href="{{question.answer.quote.cite.url}}">
+              {{question.answer.quote.cite.text}}
+            </a>
+            <span ng-if="!question.answer.quote.cite.url">
+              {{question.answer.quote.cite.text}}
+            </span>
+          </cite>
+        </footer>
+      </blockquote>
+    </div>
   </div>
 </div>
 

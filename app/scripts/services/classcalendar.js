@@ -40,6 +40,16 @@ angular.module('ylngApp')
         }
       );
     };
+    this.faq = function() {
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/faq/index.json').then(
+        function (response) {
+          return (response.data);
+        },
+        function (error) {
+          throw error.status + " : " + error.data;
+        }
+      );
+    };
   });
 /*
 angular.module('ylngApp')
