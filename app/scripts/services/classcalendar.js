@@ -50,6 +50,16 @@ angular.module('ylngApp')
         }
       );
     };
+    this.teachers = function() {
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/index.json').then(
+        function (response) {
+          return (response.data);
+        },
+        function (error) {
+          throw error.status + " : " + error.data;
+        }
+      );
+    };
   });
 /*
 angular.module('ylngApp')

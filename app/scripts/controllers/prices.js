@@ -9,5 +9,4 @@
  */
 angular.module('ylngApp')
   .controller('PricesCtrl', function () {
-    
   });
