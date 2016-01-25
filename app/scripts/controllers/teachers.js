@@ -9,6 +9,12 @@
  */
 angular.module('ylngApp')
   .controller('TeachersCtrl', function ($scope, $routeParams, $http, classCalendar) {
+    var fbpages = {
+      'Charlotte-Levy': 'CharlotteYogaPlymouth',
+      'Jules-Laville': 'JulesLavilleYOGA',
+      'Keef-Wesolowski-Miles': 'PranaMotion',
+      'Venita-Botha': 'RainbowYogaUK'
+    }
     $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/' + $routeParams.instructor + '/profile.md').then(function(res) {
       $scope.teacher = {
         id: $routeParams.instructor,
@@ -17,7 +23,8 @@ angular.module('ylngApp')
         image: {
           source: ('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/' + $routeParams.instructor + '/220x220.jpg'),
           alt: 'Profile photo of ' + $routeParams.instructor.replace(/-/g, ' ')
-        }
+        },
+        facebook: (fbpages[$routeParams.instructor]) ? fbpages[$routeParams.instructor] : false
       };
     });
     classCalendar.index().then(

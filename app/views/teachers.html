@@ -1,9 +1,19 @@
 <img src="{{teacher.image.source}}" alt="{{teacher.image.alt}}" class="img-rounded pull-left" style="margin-right: 1em; margin-bottom: 0.5em;" />
 <div marked="teacher.markdown"></div>
-<div class="clearfix"></div>
-<h4>Classes with {{teacher.name.split(' ')[0]}} at the Yoga Loft</h4>
-<ul ng-repeat="(day, classes) in ci" class="list-unstyled">
-  <li ng-repeat="class in classes">
-    {{day}}, {{class.start}}: <a href="#/classes/{{day}}/{{class.id}}">{{class.name}}</a>
-  </li>
-</ul>
+
+<div class="clearfix" style="margin: 10px"></div>
+
+<div ng-show="teacher.facebook">
+  <div class="fb-page pull-left" data-href="https://www.facebook.com/{{teacher.facebook}}/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+</div>
+
+<div class="col-md-6">
+  <h4>Classes with {{teacher.name.split(' ')[0]}} at the Yoga Loft</h4>
+  <ul ng-repeat="(day, classes) in ci" class="list-unstyled">
+    <li ng-repeat="class in classes">
+      {{day}}, {{class.start}}: <a href="#/classes/{{day}}/{{class.id}}">{{class.name}}</a>
+    </li>
+  </ul>
+</div>
+
+<div class="clearfix" style="margin: 10px"></div>
