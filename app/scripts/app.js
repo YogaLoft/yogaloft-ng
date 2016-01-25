@@ -19,22 +19,6 @@ angular
     'ngIcal',
     'hc.marked'
   ])
-  .run(function() {
-    // load the Facebook javascript SDK
-    (function(d){
-      var js, 
-      id = 'facebook-jssdk', 
-      ref = d.getElementsByTagName('script')[0];
-      if (d.getElementById(id)) {
-        return;
-      }
-      js = d.createElement('script'); 
-      js.id = id; 
-      js.async = true;
-      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
-      ref.parentNode.insertBefore(js, ref);
-    }(document));
-  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
