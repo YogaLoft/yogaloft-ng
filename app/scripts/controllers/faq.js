@@ -8,10 +8,13 @@
  * Controller of the ylngApp
  */
 angular.module('ylngApp')
-  .controller('FaqCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('FaqCtrl', function ($scope, classCalendar) {
+    classCalendar.faq().then(
+      function (faq) {
+        $scope.faq = faq;
+      },
+      function (error) {
+        console.log(error.statusText);
+      }
+    );
   });
