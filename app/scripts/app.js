@@ -76,7 +76,7 @@ angular
         controller: 'MapCtrl',
         controllerAs: 'map'
       })
-      .when('/classes/:weekday/:class', {
+      .when('/classes/:weekday?/:class', {
         templateUrl: 'views/classes.html',
         controller: 'ClassesCtrl',
         controllerAs: 'classes'
