@@ -60,6 +60,39 @@ angular.module('ylngApp')
         }
       );
     };
+    this.banner = function() {
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/banner.json').then(
+        function (response) {
+          var now = new Date();
+          return ({
+            notes: response.data.notes
+              .filter(function (item) {
+                return new Date(item.from) < now && new Date(item.to) > now;
+              })
+              .map(function (item) {
+                return item.message;
+              }),
+            warnings: response.data.warnings
+              .filter(function (item) {
+                return new Date(item.from) < now && new Date(item.to) > now;
+              })
+              .map(function (item) {
+                return item.message;
+              }),
+            alerts: response.data.alerts
+              .filter(function (item) {
+                return new Date(item.from) < now && new Date(item.to) > now;
+              })
+              .map(function (item) {
+                return item.message;
+              })
+          });
+        },
+        function (error) {
+          throw error.status + " : " + error.data;
+        }
+      );
+    };
   });
 /*
 angular.module('ylngApp')

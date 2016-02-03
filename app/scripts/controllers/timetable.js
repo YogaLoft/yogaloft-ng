@@ -8,10 +8,8 @@
  * Controller of the ylngApp
  */
 angular.module('ylngApp')
-  .controller('TimetableCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('TimetableCtrl', function ($scope, classCalendar) {
+    classCalendar.banner().then(function(banner){
+      $scope.banner = banner;
+    });
   });

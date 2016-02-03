@@ -9,6 +9,9 @@
  */
 angular.module('ylngApp')
   .controller('MainCtrl', function ($scope, classCalendar) {
+    classCalendar.banner().then(function(banner){
+      $scope.banner = banner;
+    });
     var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     var yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);

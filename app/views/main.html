@@ -1,3 +1,25 @@
+<div class="alert alert-info" ng-show="banner.notes && banner.notes.length && !banner.hidenotes">
+  <span class="pull-right">
+    <span class="glyphicon glyphicon-remove" ng-click="banner.hidenotes = !banner.hidenotes"></span>
+  </span>
+  <span class="pull-left glyphicon glyphicon-info-sign" style="margin-right: 10px;"></span>
+  <span ng-repeat="item in banner.notes" marked="item"></span>
+</div>
+<div class="alert alert-warning" ng-show="banner.warnings && banner.warnings.length && !banner.hidewarnings">
+  <span class="pull-right">
+    <span class="glyphicon glyphicon-remove" ng-click="banner.hidewarnings = !banner.hidewarnings"></span>
+  </span>
+  <span class="pull-left glyphicon glyphicon-warning-sign" style="margin-right: 10px;"></span>
+  <span ng-repeat="item in banner.warnings" marked="item"></span>
+</div>
+<div class="alert alert-danger" ng-show="banner.alerts && banner.alerts.length && !banner.hidealerts">
+  <span class="pull-right">
+    <span class="glyphicon glyphicon-remove" ng-click="banner.hidealerts = !banner.hidealerts"></span>
+  </span>
+  <span class="pull-left glyphicon glyphicon-alert" style="margin-right: 10px;"></span>
+  <span ng-repeat="item in banner.alerts" marked="item"></span>
+</div>
+
 <div id="slides">
   <div>
     <img src="images/crescent-moon-lunge.jpg" alt="Yoga students in a crescent moon lunge." />
