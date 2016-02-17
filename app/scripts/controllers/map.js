@@ -8,10 +8,8 @@
  * Controller of the ylngApp
  */
 angular.module('ylngApp')
-  .controller('MapCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MapCtrl', function ($scope, $http) {
+    $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/directions.md').then(function(res) {
+      $scope.markdown = res.data;
+    });
   });
