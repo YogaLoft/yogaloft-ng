@@ -24,7 +24,12 @@
       {{d.start}} - {{d.end}}
     </h3>
   </div>
-  <h3>with <a href="#/teachers/{{workshop.instructor.id}}">{{workshop.instructor.name}}</a></h3>
+  <h3>
+    with
+    <a href="#/teachers/{{workshop.instructor.id}}" ng-repeat="instructor in workshop.instructors">
+      {{instructor.name}}
+    </a>
+  </h3>
   <div marked="markdown"></div>
   <div ng-if="passes && passes.length">
     <script type="text/javascript" async src="https://yogaloft.tulasoftware.com/assets/purchase-widget.js"></script><a class="tulasoftware-purchase-widget" href="{{passes}}">Purchase</a>
