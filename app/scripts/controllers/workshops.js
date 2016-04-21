@@ -11,9 +11,9 @@ angular.module('ylngApp')
   .controller('WorkshopsCtrl', function ($scope, $routeParams, $http, classCalendar) {
     $scope.workshopId = ($routeParams.workshop !== undefined) ? $routeParams.workshop : false;
     classCalendar.workshops().then(
-      function (index) {
+      function (all) {
         if ($scope.workshopId) {
-          var w = index.find(
+          var w = all.find(
             function(w){
               return w.id === $scope.workshopId;
             }
@@ -29,8 +29,8 @@ angular.module('ylngApp')
             $scope.markdown = res.data;
           });
         } else {
-          $scope.workshops = index.filter(function(w){
-            return new Date(w.display.from) < now && new Date(w.display.to) > now; 
+          $scope.workshops = all.filter(function(w){
+            return new Date(w.display.from) < (new Date()) && new Date(w.display.to) > (new Date()); 
           });
         }
       },
