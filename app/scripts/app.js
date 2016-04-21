@@ -91,6 +91,11 @@ angular
         controller: 'FaqCtrl',
         controllerAs: 'faq'
       })
+      .when('/workshops/:workshop?', {
+        templateUrl: 'views/workshops.html',
+        controller: 'WorkshopsCtrl',
+        controllerAs: 'workshops'
+      })
       .otherwise({
         redirectTo: '/'
       });

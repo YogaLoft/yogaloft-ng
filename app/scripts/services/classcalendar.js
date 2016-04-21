@@ -93,6 +93,16 @@ angular.module('ylngApp')
         }
       );
     };
+    this.workshops = function() {
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/workshops/index.json').then(
+        function (response) {
+          return (response.data);
+        },
+        function (error) {
+          throw error.status + " : " + error.data;
+        }
+      );
+    };
   });
 /*
 angular.module('ylngApp')

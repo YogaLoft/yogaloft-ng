@@ -1,0 +1,39 @@
+<div class="alert alert-info" ng-show="workshop.notes && workshop.notes.length">
+  <span ng-repeat="note in workshop.notes" marked="note"></span>
+</div>
+<div class="alert alert-warning" ng-show="workshop.warnings && workshop.warnings.length">
+  <span ng-repeat="warning in workshop.warnings" marked="warning"></span>
+</div>
+<div class="alert alert-danger" ng-show="workshop.alerts && workshop.alerts.length">
+  <span ng-repeat="alert in workshop.alerts" marked="alert"></span>
+</div>
+
+<div  ng-show="workshopId">
+  <div class="clearfix content-heading">
+    <a href="#/teachers/{{workshop.instructor.id}}">
+      <img class="pull-left" style="border-radius: 50%; width: 64px; height: 64px; margin-right: 20px;" ng-src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{workshop.instructor.id}}/128x128.png" />
+    </a>
+    <h1>{{workshop.name}}</h1>
+  </div>
+  <div ng-repeat="d in workshop.dates">
+    <h2>
+      {{d.date}}
+    </h2>
+    <h3>
+      <i class="fa fa-clock-o"></i>
+      {{d.start}} - {{d.end}}
+    </h3>
+  </div>
+  <h3>with <a href="#/teachers/{{workshop.instructor.id}}">{{workshop.instructor.name}}</a></h3>
+  <div marked="markdown"></div>
+  <div ng-if="passes && passes.length">
+    <script type="text/javascript" async src="https://yogaloft.tulasoftware.com/assets/purchase-widget.js"></script><a class="tulasoftware-purchase-widget" href="{{passes}}">Purchase</a>
+  </div>
+</div>
+<ul ng-show="workshops">
+  <li ng-repeat="workshop in workshops">
+    <a href="#/workshops/{{workshop.id}}">
+      {{workshop.name}}
+    </a>
+  </li>
+</ul>
