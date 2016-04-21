@@ -29,7 +29,9 @@ angular.module('ylngApp')
             $scope.markdown = res.data;
           });
         } else {
-          $scope.workshops = index;
+          $scope.workshops = index.filter(function(w){
+            return new Date(w.display.from) < now && new Date(w.display.to) > now; 
+          });
         }
       },
       function (error) {
