@@ -10,8 +10,8 @@
 
 <div  ng-show="workshopId">
   <div class="clearfix content-heading">
-    <a href="#/teachers/{{workshop.instructor.id}}">
-      <img class="pull-left" style="border-radius: 50%; width: 64px; height: 64px; margin-right: 20px;" ng-src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{workshop.instructor.id}}/128x128.png" />
+    <a href="#/teachers/{{instructor.id}}" ng-repeat="instructor in workshop.instructors">
+      <img class="pull-left" style="border-radius: 50%; width: 64px; height: 64px; margin-right: 20px;" ng-src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{instructor.id}}/128x128.png" />
     </a>
     <h1>{{workshop.name}}</h1>
   </div>
@@ -23,9 +23,7 @@
   </ul>
   <h3>
     with
-    <a href="#/teachers/{{workshop.instructor.id}}" ng-repeat="instructor in workshop.instructors">
-      {{instructor.name}}
-    </a>
+    <span ng-repeat="instructor in workshop.instructors"><span ng-show="$last && !$first"> &amp; </span><span ng-show="$middle">, </span><a href="#/teachers/{{workshop.instructor.id}}">{{instructor.name}}</a></span>
   </h3>
   <div marked="markdown"></div>
   <div ng-if="passes && passes.length">
