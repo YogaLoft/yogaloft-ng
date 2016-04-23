@@ -15,15 +15,12 @@
     </a>
     <h1>{{workshop.name}}</h1>
   </div>
-  <div ng-repeat="d in workshop.dates">
-    <h2>
-      {{d.date}}
-    </h2>
-    <h3>
-      <i class="fa fa-clock-o"></i>
+  <ul ng-show="workshop.dates">
+    <li ng-repeat="d in workshop.dates">
+      {{d.date | date:'EEEE MMMM d, yyyy'}}
       {{d.start}} - {{d.end}}
-    </h3>
-  </div>
+    </li>
+  </ul>
   <h3>
     with
     <a href="#/teachers/{{workshop.instructor.id}}" ng-repeat="instructor in workshop.instructors">
