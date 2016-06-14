@@ -12,10 +12,9 @@ angular.module('ylngApp')
     $scope.instructors = [
       'Charlotte-Levy',
       'Gavin-Tilstone',
-      'Holly-Manigan',
+      'Sophie-Northmore',
       'Jo-Thyssen',
       'Jules-Laville',
-      'Keef-Wesolowski-Miles',
       'Lee-Miller',
       'Marilina-De-Matteis',
       'Nic-Sharpe',
