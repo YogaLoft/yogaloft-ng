@@ -10,16 +10,15 @@
 angular.module('ylngApp')
   .controller('NavCtrl', function ($scope, $location, classCalendar) {
     $scope.instructors = [
-        'Charlotte-Levy',
-        'Gavin-Tilstone',
- -      'Holly-Manigan',
-        'Jo-Thyssen',
-        'Jules-Laville',
- -      'Keef-Wesolowski-Miles',
-        'Lee-Miller',
-        'Marilina-De-Matteis',
-        'Nic-Sharpe',
+      'Charlotte-Levy',
+      'Gavin-Tilstone',
+      'Jo-Thyssen',
+      'Jules-Laville',
+      'Lee-Miller',
+      'Marilina-De-Matteis',
+      'Nic-Sharpe',
       'Peter-Hughes',
+      'Sophie-Northmore',
       'Venita-Botha'
     ];
     $scope.isActive = function (loc) {
