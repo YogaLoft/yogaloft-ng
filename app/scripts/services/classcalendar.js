@@ -31,7 +31,7 @@ angular.module('ylngApp')
       );
     };
     this.index = function() {
-      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/classes/index.json').then(
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/classes/index.json?' + Math.random()).then(
         function (response) {
           return (response.data);
         },
@@ -41,7 +41,7 @@ angular.module('ylngApp')
       );
     };
     this.faq = function() {
-      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/faq/index.json').then(
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/faq/index.json?' + Math.random()).then(
         function (response) {
           return (response.data);
         },
@@ -51,7 +51,7 @@ angular.module('ylngApp')
       );
     };
     this.teachers = function() {
-      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/index.json').then(
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/index.json?' + Math.random()).then(
         function (response) {
           return (response.data);
         },
@@ -61,7 +61,7 @@ angular.module('ylngApp')
       );
     };
     this.banner = function() {
-      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/banner.json').then(
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/banner.json?' + Math.random()).then(
         function (response) {
           var now = new Date();
           return ({
@@ -94,7 +94,7 @@ angular.module('ylngApp')
       );
     };
     this.workshops = function() {
-      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/workshops/index.json').then(
+      return $http.get('https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/workshops/index.json?' + Math.random()).then(
         function (response) {
           return (response.data);
         },
