@@ -15,10 +15,8 @@ angular.module('ylngApp')
       'Jo-Thyssen',
       'Jules-Laville',
       'Lee-Miller',
-      'Marilina-De-Matteis',
       'Nic-Sharpe',
       'Peter-Hughes',
-      'Sophie-Northmore',
       'Venita-Botha'
     ];
     $scope.isActive = function (loc) {
