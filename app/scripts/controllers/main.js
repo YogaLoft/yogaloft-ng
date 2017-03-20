@@ -28,12 +28,12 @@ angular.module('ylngApp')
             start: c.start.toTimeString().substring(0,5),
             end: c.end.toTimeString().substring(0,5),
             class: {
-              url: '#/classes/' + weekdays[c.start.getDay()] + '/' + c.class.replace(/ /g, '-'),
+              url: '#!/classes/' + weekdays[c.start.getDay()] + '/' + c.class.replace(/ /g, '-'),
               name: c.class
             },
             instructor: {
               name: c.instructor,
-              url: '#/teachers/' + c.instructor.replace(/ /g, '-'),
+              url: '#!/teachers/' + c.instructor.replace(/ /g, '-'),
               image: 'https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/' + c.instructor.replace(/ /g, '-') + '/24x24.png'
             },
             location: c.location

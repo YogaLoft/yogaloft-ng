@@ -10,7 +10,7 @@
 
 
 <div class="clearfix content-heading">
-  <a href="#/teachers/{{class.instructor.id}}" ng-show="weekday">
+  <a href="#!/teachers/{{class.instructor.id}}" ng-show="weekday">
     <img class="pull-left" style="border-radius: 50%; width: 64px; height: 64px; margin-right: 20px;" ng-src="https://raw.githubusercontent.com/YogaLoft/yogaloft-content/master/teachers/{{class.instructor.id}}/128x128.png" />
   </a>
   <h1>{{class.name}}</h1>
@@ -19,7 +19,7 @@
   <i class="fa fa-clock-o"></i>
   {{weekday}} {{class.start}} - {{class.end}}
 </h2>
-<h3 ng-show="weekday">with <a href="#/teachers/{{class.instructor.id}}">{{class.instructor.name}}</a></h3>
+<h3 ng-show="weekday">with <a href="#!/teachers/{{class.instructor.id}}">{{class.instructor.name}}</a></h3>
 <div marked="markdown"></div>
 
 <div ng-if="class && passes && passes.length">
