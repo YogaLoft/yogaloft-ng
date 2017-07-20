@@ -46,71 +46,12 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
       .when('/teachers/:instructor', {
         templateUrl: 'views/teachers.html',
         controller: 'TeachersCtrl',
         controllerAs: 'teachers'
       })
-      .when('/test', {
-        templateUrl: 'views/test.html',
-        controller: 'TestCtrl',
-        controllerAs: 'test'
-      })
-      .when('/timetable', {
-        templateUrl: 'views/timetable.html',
-        controller: 'TimetableCtrl',
-        controllerAs: 'timetable'
-      })
-      .when('/account', {
-        templateUrl: 'views/account.html',
-        controller: 'AccountCtrl',
-        controllerAs: 'account'
-      })
-      .when('/map', {
-        templateUrl: 'views/map.html',
-        controller: 'MapCtrl',
-        controllerAs: 'map'
-      })
-      .when('/classes/:weekday?/:class', {
-        templateUrl: 'views/classes.html',
-        controller: 'ClassesCtrl',
-        controllerAs: 'classes'
-      })
-      .when('/prices', {
-        templateUrl: 'views/prices.html',
-        controller: 'PricesCtrl',
-        controllerAs: 'prices'
-      })
-      .when('/faq', {
-        templateUrl: 'views/faq.html',
-        controller: 'FaqCtrl',
-        controllerAs: 'faq'
-      })
-      .when('/workshops/:workshop?', {
-        templateUrl: 'views/workshops.html',
-        controller: 'WorkshopsCtrl',
-        controllerAs: 'workshops'
-      })
       .otherwise({
         redirectTo: '/'
       });
-  })
-  /*.config(function ($locationProvider) {
-    if (window.history && window.history.pushState) {
-      $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: true,
-        rewriteLinks: false
-      });
-    }
-    else {
-      $locationProvider
-        .html5Mode(false)
-        .hashPrefix('!');
-    }
-})*/;
+  });

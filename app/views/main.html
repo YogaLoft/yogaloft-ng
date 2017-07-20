@@ -32,40 +32,10 @@
   </div>
 </div>
 <div>
-  <h2>Welcome to the Yoga Loft in Plymouth, Devon!</h2>
-  <p>The studio has been carefully designed to offer a tranquil space in which to take off your shoes and enjoy the practice of yoga. 'A beautiful practice deserves a beautiful space' has been the mantra behind the creation of the studio.</p>
-  <p>We offer a full <a href="#!/timetable">timetable of daily classes</a> in a range of yoga styles. We have classes for all levels of experience: from complete beginners to more experienced practitioners.</p>
-  <p>We look forward to seeing you soon. Namaste</p>
+  <h2>Classes at the Yoga Loft, Whimple Street suspended</h2>
+  <p>Due to circumstances beyond our control, timetabled classes are currently suspended. Please see the <a href="https://www.facebook.com/YogaLoftPlymouth">facebook page</a> for further details and updates.</p>
 </div>
-<div>
-  <h2>what's on</h2>
-  <div class="col-md-3" ng-repeat="day in days">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          {{day}}
-        </h3>
-      </div>
-      <div class="panel-body">
-        <ul class="list-unstyled">
-          <li ng-repeat="item in upcomingClasses | filter:{ day: day }" style="margin: 0.3em 0;">
-            <a href="{{item.instructor.url}}">
-              <img class="img-rounded" ng-src="{{item.instructor.image}}" />
-            </a>
-            {{item.start}} ~ {{item.end}}:
-            <a href="{{item.class.url}}">{{item.class.name}}</a> with
-            <a href="{{item.instructor.url}}">{{item.instructor.name}}</a>
-          </li>
-        </ul>
-        <br />
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="fb-page" data-href="https://www.facebook.com/YogaLoftPlymouth" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-  </div>
-  <div class="clearfix"></div>
-</div>
+<div class="clearfix"></div>
 <script type="text/javascript">
   $(document).ready(function () {
     $("#slides > div:gt(0)").hide();
