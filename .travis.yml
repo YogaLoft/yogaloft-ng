@@ -5,7 +5,7 @@ before_install:
 node_js:
 - iojs
 before_script:
-- npm install -g bower grunt-cli
+- npm install -g bower grunt-cli generator-angular generator-karma grunt-karma yo
 - bower install
 script:
 - grunt build
