@@ -15,7 +15,6 @@ angular.module('ylngApp')
       'Georgie-Crickmere',
       'Jo-Thyssen',
       'Jules-Laville',
-      'Lee-Miller',
       'Nic-Sharpe',
       'Peter-Hughes',
       'Venita-Botha'
