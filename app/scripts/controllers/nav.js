@@ -9,7 +9,16 @@
  */
 angular.module('ylngApp')
   .controller('NavCtrl', function ($scope, $location, classCalendar) {
-    
+    $scope.instructors = [
+      'Charlotte-Levy',
+      'Gavin-Tilstone',
+      'Georgie-Crickmere',
+      'Jo-Thyssen',
+      'Jules-Laville',
+      'Nic-Sharpe',
+      'Peter-Hughes',
+      'Venita-Botha'
+    ];
     $scope.isActive = function (loc) {
       return (($location.path() === '/' && loc === '/') || ($location.path() !== '/' && loc !== '/' && $location.path().startsWith(loc)));
     };
